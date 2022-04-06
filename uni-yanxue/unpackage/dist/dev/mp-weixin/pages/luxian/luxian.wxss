@@ -1,0 +1,19 @@
+
+page {
+	background-color: #f4f4f4;
+	font-size: 32rpx;
+}
+.flex {
+	text-align: center;
+	margin-top: 20rpx;
+}
+.flex-sub {
+	text-align: center;
+}
+.tuijian {
+	padding: 22rpx;
+	margin-top: 22rpx;
+	font-size: 43rpx;
+	text-align: center;
+}
+

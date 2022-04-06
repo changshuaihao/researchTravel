@@ -1,0 +1,45 @@
+
+page {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	        flex-direction: column;
+	height: 100%;
+	/* background-color: #f4f4f4; */
+}
+.a {
+	-webkit-border-radius: 30rpx 30rpx 0 0;
+	        border-radius: 30rpx 30rpx 0 0;
+	background-color: #F4F4F4;
+	margin-top: 20rpx;
+}
+.tab {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	margin-top: 20rpx;
+}
+.tab-item {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	        flex: 1;
+	font-size: 10pt;
+	text-align: center;
+	line-height: 72rpx;
+	margin: 10rpx;
+}
+.content01 {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	        flex: 1;
+}
+.tab-item.active {
+	color: #000;
+	background-color: #f4f4f4;
+	border-bottom: 2rpx solid #FFCE35;
+	color: #FFCE35;
+}
+

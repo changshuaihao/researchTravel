@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>layui</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="../../lib/layui-v2.5.5/css/layui.css" media="all">
+		<link rel="stylesheet" href="../../css/public.css" media="all">
+		<style>
+			body {
+				background-color: #ffffff;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="layui-form layuimini-form">
+			<div class="layui-form-item">
+				<label class="layui-form-label required">批次编号</label>
+				<div class="layui-input-block">
+					<!-- 改name，下同-->
+					<input type="text" name="projectNum" lay-verify="required" lay-reqtext="批次编号不能为空"
+						placeholder="请输入批次编号" value="" class="layui-input">
+					<tip>例如:20201010001</tip>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label required">批次名称</label>
+				<div class="layui-input-block">
+					<input type="text" name="projectTitle" lay-verify="required" lay-reqtext="批次名称不能为空"
+						placeholder="请输入批次名称" value="" class="layui-input">
+					<tip>例如:2020年院级质量工程项目</tip>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label required">项目类别</label>
+				<div class="layui-input-block">
+					<input type="text" name="projectType" lay-verify="required" placeholder="请输入项目类别" value=""
+						class="layui-input">
+					<tip>例如:特色创新类(自然科学)</tip>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">级别</label>
+				<div class="layui-input-block">
+					<input type="text" name="projectLevel" placeholder="请输入项目级别" value="" class="layui-input">
+				</div>
+			</div>
+
+			<div class="layui-form-item">
+				<label class="layui-form-label">时间范围</label>
+				<div class="layui-input-inline">
+					<input type="text" name="projectTime" class="layui-input" id="data" placeholder=" - ">
+				</div>
+
+				<div class="layui-form-item">
+					<div class="layui-input-block">
+						<button class="layui-btn layui-btn-normal layui-layout-right" lay-submit
+							lay-filter="saveBtn">确认保存</button>
+					</div>
+				</div>
+			</div>
+			<script src="../../lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+			<script src="../../lib/jquery-3.4.1/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+			<script src="../../js/common.js" type="text/javascript" charset="utf-8"></script>
+			<script>
+				layui.use(['form', 'laydate'], function() {
+					var form = layui.form,
+						layer = layui.layer,
+						laydate = layui.laydate,
+						$ = layui.$;
+
+					laydate.render({
+						elem: '#data',
+						range: true
+					});
+
+					//监听提交
+					form.on('submit(saveBtn)', function(data) {
+						console.log(data.field)
+						// 提交修改
+						var Tab_Name = "a_projectbatch"//改表名
+						var atr = JSON.parse(serializeArr(data.field))
+						var len = atr.length
+						$.ajax({
+							url: '../../php/Form_save.php',
+							type: 'post',
+							data: {
+								'Tab_Name': Tab_Name,
+								'atr': atr,
+								'len': len
+							},
+							success: function(data) {
+								console.log(data)
+								layer.msg('保存成功', {
+									icon: 1,
+									time: 500
+								}, function() {
+									window.parent.location.reload();
+									var index = parent.layer.getFrameIndex(window
+									.name); 
+									parent.layer.close(index);   
+								});
+							}
+						})
+						return false;
+					});
+				});
+
+
+				//改字段名
+				function child(data) {
+					$("input[name='projectNum']").val(data.projectNum);
+					$("input[name='projectTitle']").val(data.projectTitle);
+					$("input[name='projectType']").val(data.projectType);
+					$("input[name='projectTime']").val(data.projectTime);
+					$("input[name='projectLevel']").val(data.projectLevel);
+				}
+			</script>
+	</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>基地添加</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="../../lib/layui-v2.5.5/css/layui.css" media="all">
+		<link rel="stylesheet" href="../../css/public.css" media="all">
+		<style>
+			body {
+				background-color: #ffffff;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="layui-form layuimini-form">
+			<div class="layui-form-item">
+				<label class="layui-form-label required">基地批次号</label>
+				<div class="layui-input-block">
+					<!-- 改name，下同-->
+					<input type="text" name="projectNum" lay-verify="required" lay-reqtext="基地编号不能为空"
+						placeholder="请输入基地编号" value="" class="layui-input">
+					<tip>例如:2020101001</tip>
+				</div>
+			</div>
+		
+			<div class="layui-form-item">
+				<label class="layui-form-label required">基地名称</label>
+				<div class="layui-input-block">
+					<input type="text" name="title" lay-verify="required" lay-reqtext="基地名称不能为空"
+						placeholder="请输入基地名称" value="" class="layui-input">
+					<tip>例如:艾米天空稻田研学基地</tip>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label required">基地类别</label>
+				<div class="layui-input-block">
+					<input type="text" name="projectType" lay-verify="required" placeholder="请输入基地类别" value=""
+						class="layui-input">
+					<tip>例如:研学基地</tip>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">基地简介</label>
+				<div class="layui-input-block">
+					<input type="text" name="introduce" placeholder="请输入基地简介" value="" class="layui-input">
+				</div>
+			</div>
+
+			<!-- <div class="layui-form-item">
+					<label class="layui-form-label">基地图片</label>
+					<div class="layui-input-inline">
+						<input type="text" name="url" class="layui-input" id="data" placeholder=" - ">
+				</div> -->
+				
+				<div class="layui-form-item">
+					<label class="layui-form-label">基地图片</label>
+					<div class="layui-input-block">
+						<input type="text" name="url" placeholder="请上传或输入图片地址" value="" class="layui-input">
+					</div>
+				</div>
+
+			<div class="layui-form-item">
+				<div class="layui-input-block">
+					<button class="layui-btn layui-btn-normal layui-layout-right" lay-submit
+						lay-filter="saveBtn">确认保存</button>
+				</div>
+			</div>
+		</div>
+
+		<script src="../../lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+		<script>
+			layui.use(['form', 'laydate'], function() {
+				var form = layui.form,
+					layer = layui.layer,
+					laydate = layui.laydate,
+					$ = layui.$;
+
+
+				laydate.render({
+					elem: '#data',
+					range: true
+				});
+
+
+				//监听提交
+				form.on('submit(saveBtn)', function(data) {
+					var atr = JSON.parse(serializeArr(data.field))
+					var Tab_Name = 'index_jidi_local'//改表名
+					var len = atr.length
+						
+					$.ajax({
+						url: '../../php/Form_save.php',
+						type: "post",
+						data: {
+							'atr': atr,
+							'Tab_Name': Tab_Name,
+							'len': len
+						},
+						success: function(data) {
+							console.log(data)
+							// alert(data)			
+							layer.msg('保存成功', {
+								icon: 1,
+								time: 700
+							}, function() {
+								
+								window.parent.location.reload();
+								var index = parent.layer.getFrameIndex(window
+								.name); 
+								parent.layer.close(index);  
+							});
+						}
+
+					})
+				});
+
+			});
+
+			function Len(json) {
+				var jsonLength = 0;
+				for (var i in json) {
+					jsonLength++;
+				}
+				return jsonLength;
+			}
+
+			function serializeArr(values) {
+				var vs = '['
+				for (var key in values) {
+					vs += "{\"name\":\"" + key + "\",\"value\":\"" + values[key] + "\"},"
+				}
+				vs = vs.substr(0, vs.length - 1);
+				vs += ']'
+				JSON.parse(vs)
+				return vs
+			}
+		</script>
+	</body>
+</html>

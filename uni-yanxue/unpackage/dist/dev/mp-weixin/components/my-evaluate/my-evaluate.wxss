@@ -1,0 +1,71 @@
+
+.content-v {
+	margin-left: 30rpx;
+	margin-right: 30rpx;
+	margin-top: 20rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	width: 93%;
+	height: 70rpx;
+	line-height: 70rpx;
+	background-color: white;
+	font-size: 12px;
+	font-weight: 330;
+	padding-left: 12rpx;
+}
+.content-v-01 {
+	color: #F59A23;
+	font-weight: 500;
+	margin-left: 200rpx;
+}
+.last {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	        flex-direction: row;
+	height: 250rpx;
+	width: 95%;
+	margin: 15rpx 0rpx 20rpx 20rpx;
+	background-color: white;
+}
+.last>image {
+	height: 220rpx;
+	line-height: 220rpx;
+	width: 40%;
+	margin: 15rpx 0rpx 0rpx 20rpx;
+}
+.last01 {
+	font-size: 12px;
+	width: 95%;
+	margin: 25rpx 0rpx 0rpx 20rpx;
+}
+.last02 {
+	font-size: 11px;
+	font-weight: 300;
+	margin: 10rpx 0rpx 0rpx 30rpx;
+}
+.last02>text {
+	margin-left: 40rpx;
+}
+.last03 {
+	/* width: 40%; */
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+.last03>button {
+	font-size: 10px;
+	width: 30%;
+	height: 40rpx;
+	margin-top: 40rpx;
+	margin-left: 30rpx;
+	line-height: 40rpx;
+	background-color: white;
+	color: #F59A23;
+	border: 1px solid #F59A23;
+}
+

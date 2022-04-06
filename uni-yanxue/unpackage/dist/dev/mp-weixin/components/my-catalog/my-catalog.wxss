@@ -1,0 +1,32 @@
+
+.me {
+  background-color: white;
+  margin: 15rpx 0rpx 15rpx 15rpx;
+  width: 96%;
+}
+.me > view {
+  padding: 20rpx;
+  line-height: 60rpx;
+  border-bottom: 1px solid #efefef;
+  height: 100rpx;
+}
+.me > view:last-child {
+  border: none;
+}
+.ar{
+  float: left;
+  width: 65rpx;
+  height: 65rpx;
+  line-height: 65rpx;
+}
+.arrow02{
+  margin-left: 25rpx;
+  font-size: 13px;
+}
+.arrow01{
+  width: 30rpx;
+  height: 32rpx;
+  float: right;
+  margin-top: 16rpx;
+}
+

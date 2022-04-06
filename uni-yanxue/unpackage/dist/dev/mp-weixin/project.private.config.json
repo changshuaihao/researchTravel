@@ -1,0 +1,155 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": 0,
+          "name": "详情页",
+          "pathName": "pages/detail/detail",
+          "query": "interval=4000&autoplay=false"
+        },
+        {
+          "name": "pages/ceshi/ceshi",
+          "pathName": "pages/ceshi/ceshi",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/kecheng01/kecheng01",
+          "pathName": "pages/kecheng01/kecheng01",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/kecheng02/kecheng02",
+          "pathName": "pages/kecheng02/kecheng02",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/LX",
+          "pathName": "pages/my/LX",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/my",
+          "pathName": "pages/my/my",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/LX3",
+          "pathName": "pages/my/LX3",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/records/records",
+          "pathName": "pages/records/records",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/travel-records",
+          "pathName": "pages/my/travel-records",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/LX2",
+          "pathName": "pages/my/LX2",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/huaxu/huaxu",
+          "pathName": "pages/huaxu/huaxu",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/start",
+          "pathName": "pages/my/start",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/luxian/xian",
+          "pathName": "pages/luxian/xian",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/kecheng01/kecheng01",
+          "pathName": "pages/kecheng01/kecheng01",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/kecheng02/kecheng02",
+          "pathName": "pages/kecheng02/kecheng02",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/kecheng",
+          "pathName": "pages/my/kecheng",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/curriculum",
+          "pathName": "pages/my/curriculum",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/luxian/luxian",
+          "pathName": "pages/luxian/luxian",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/kecheng/kecheng",
+          "pathName": "pages/kecheng/kecheng",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/kecheng/kecheng",
+          "pathName": "pages/kecheng/kecheng",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/start",
+          "pathName": "pages/my/start",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/study/study",
+          "pathName": "pages/study/study",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

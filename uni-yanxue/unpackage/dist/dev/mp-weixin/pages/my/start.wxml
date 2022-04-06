@@ -1,0 +1,1 @@
+<view class="header-start"><view class="header-01"><view class="my01"><image class="img_my" src="{{yonghuwx.avatarUrl}}"></image></view><view class="my01-t">{{yonghuwx.nickName}}</view></view><button data-event-opts="{{[['tap',[['getUserInfo']]]]}}" class="button" bindtap="__e">请点击登录</button></view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "base-center": "/components/base-my-list/base-my-list",
+    "mycatalog": "/components/my-catalog/my-catalog"
+  }
+}

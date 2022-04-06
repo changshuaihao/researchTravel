@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>购买课程</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+		<link rel="stylesheet" href="../lib/layui-v2.5.5/css/layui.css" media="all">
+		<link rel="stylesheet" href="../css/public.css" media="all">
+	</head>
+	<body>
+		<div class="layuimini-container">
+			<div class="layuimini-main">
+				<!-- <fieldset class="table-search-fieldset">
+					<legend>搜索信息</legend>
+					<div style="margin:-5px">
+						<form class="layui-form layui-form-pane" action="">
+							<div class="layui-form-item">
+								<div class="layui-inline">
+									<label class="layui-form-label">基地批次号</label>
+									<div class="layui-input-inline">
+										<input type="text" name="projectNum" autocomplete="off" class="layui-input">
+									</div>
+								</div>
+								<div class="layui-inline">
+									<label class="layui-form-label">基地名称</label>
+									<div class="layui-input-inline">
+										<input type="text" name="title" autocomplete="off" class="layui-input">
+									</div>
+								</div>
+								<div class="layui-inline">
+									<label class="layui-form-label">基地级别</label>
+									<div class="layui-input-inline">
+										<input type="text" name="projectType" autocomplete="off" class="layui-input">
+									</div>
+								</div>
+
+								<div class="layui-inline">
+									<button type="submit" class="layui-btn layui-btn-primary" lay-submit
+										lay-filter="data-search-btn"><i class="layui-icon"></i>
+										搜 索</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</fieldset> -->
+				
+				<!-- <script type="text/html" id="toolbarDemo">
+					<div class="layui-btn-container">
+					/**
+					 * 改lay-event，也可以不改
+					 */
+						<button class="layui-btn layui-btn-normal layui-btn-sm data-add-btn" lay-event="add">添加基本信息</button>
+						<button class="layui-btn layui-btn-sm layui-btn-danger data-delete-btn" lay-event="delete"> 删除 </button>
+					</div>
+				</script> -->
+
+				<table class="layui-hide" id="currentTableId" lay-filter="currentTableFilter"></table>
+
+				<script type="text/html" id="currentTableBar">
+					<a class="layui-btn layui-btn-normal layui-btn-xs data-count-edit" lay-event="edit">编辑基本信息</a>
+				</script>
+
+			</div>
+		</div>
+		<script src="../lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+		<script>
+			var check;
+			layui.use(['form', 'table'], function() {
+				var $ = layui.jquery,
+					form = layui.form,
+					table = layui.table;
+
+				//打开页面，进行一次查询操作，将查询到的数据展示出来。
+				table.render({
+					elem: '#currentTableId',
+					url: '../php/Tab_query.php',
+					type: 'get',
+					headers: "Content-type: text/html; charset=utf-8",
+					where: {
+						Tab_Name: 'kecheng', //改表名
+						Cont: ''
+					},
+					toolbar: '#toolbarDemo',
+					defaultToolbar: ['filter', 'exports', 'print', {
+						title: '提示',
+						layEvent: 'LAYTABLE_TIPS',
+						icon: 'layui-icon-tips'
+					}],
+					cols: [
+						[{
+								type: "checkbox",
+								width: 50
+							},
+							{
+								field: 'name', //改字段名
+								width: 120,
+								title: '课程名称',
+								sort: true
+							},
+							{
+								field: 'price',
+								width: 200,
+								title: '课程价格'
+							},
+							{
+								field: 'time',
+								width: 310,
+								title: '购买时间'
+							},
+							{
+								field: 'url',
+								title: '购买链接',
+								width: 550
+							},
+							// {
+							// 	field: 'url',
+							// 	width: 160,
+							// 	title: '基地图片',
+							// 	sort: true
+							// },
+							{
+								title: '操作',
+								minWidth: 120,
+								toolbar: '#currentTableBar',
+								align: "center",
+								fixed: 'right'
+							},
+						]
+					],
+					parseData: function(res) {
+						return {
+							"code": 0,
+							"msg": "",
+							"count": 1000,
+							"data": res
+						};
+					},
+					limits: [10, 15, 20, 25, 50, 100],
+					limit: 15,
+					page: true,
+				});
+
+				// 监听【搜索】按钮，并在点击后根据输入的条件实现查询
+				form.on('submit(data-search-btn)', function(data) {
+					//执行搜索重载
+					table.reload('currentTableId', {
+						url: '../php/Tab_query.php',
+						type: 'GET',
+						headers: "Content-type: text/html; charset=utf-8",
+						where: {
+							Tab_Name: 'kecheng', //改表名
+							Cont: " where name like '%" + data.field.name +
+								"%' and time like '%" + data.field.time +
+								"%' and price like '%" + data.field.price + "%'" //改字段名
+						},
+						parseData: function(res) {
+							return {
+								"code": 0,
+								"msg": "",
+								"count": 1000,
+								"data": res
+							};
+						},
+						page: {
+							curr: 1
+						}
+					}, 'data');
+
+					return false;
+				});
+
+				/**
+				 * 监听【添加】按钮，在点击后，打开相应弹窗
+				 */
+				table.on('toolbar(currentTableFilter)', function(obj) {
+					var checkStatus = table.checkStatus(obj.config.id);
+					if (obj.event === 'add') { // 监听添加操作
+						var index = layer.open({
+							title: '添加批次基本信息',
+							type: 2,
+							shade: 0.2,
+							maxmin: true,
+							shadeClose: true,
+							area: ['70%', '80%'],
+							content: '../page/table/jdtj.html', //改弹窗
+						});
+
+						////
+
+					}
+
+					/**
+					 * 监听【删除】按钮，在点击后，直接删除
+					 */
+					else if (obj.event === 'delete') {
+
+						var checkStatus = table.checkStatus('currentTableId'),
+							data = checkStatus.data;
+						var ids = data
+						var Tab_Name = 'index_jidi_local' //改表名
+						var Cont = " where id in (" //改主键名
+						var cont = ''
+						for (var i in ids) {
+							cont += ids[i].id + ','
+						}
+						cont = cont.substring(0, (cont.length - 1))
+						Cont += cont + ')'
+						console.log(Tab_Name, Cont)
+
+						layer.alert('确认删除吗', {
+							icon: 3
+						}, function(index) {
+							//执行删除
+							$.ajax({
+								url: '../php/Tab_delete.php',
+								type: "post",
+								data: {
+									'Tab_Name': Tab_Name,
+									'Cont': Cont
+								},
+								success: function(data) {
+									console.log(data)
+									layer.msg('删除', {
+										icon: 1,
+										time: 500
+									}, function() {
+										window.location.reload();
+									});
+								}
+
+							})
+							layer.close(index);
+						});
+					}
+				});
+
+				//监听表格复选框选择，获取选择了的数据，在打开相应弹窗的同时，将数据传递到弹窗中
+				table.on('checkbox(currentTableFilter)', function(obj) {
+					console.log(obj)
+				});
+
+				table.on('tool(currentTableFilter)', function(obj) {
+
+					if (obj.event === 'edit') {
+						var data = obj.data;
+						var index = layer.open({
+							title: '编辑用户',
+							type: 2,
+							shade: 0.2,
+							maxmin: true,
+							shadeClose: true,
+							area: ['100%', '100%'],
+							content: '../page/table/gmbj.html',
+							success: function(layero, index) {
+								var iframe = window['layui-layer-iframe' + index];
+								iframe.child(data);
+							},
+						});
+						$(window).on("resize", function() {
+							layer.full(index);
+						});
+						return false;
+					}
+				});
+			});
+		</script>
+
+	</body>
+</html>

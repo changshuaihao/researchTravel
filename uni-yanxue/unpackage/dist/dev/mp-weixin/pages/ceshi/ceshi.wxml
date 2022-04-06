@@ -1,0 +1,1 @@
+<view><image src="{{url}}" mode data-event-opts="{{[['tap',[['previewImage',['$0'],['url']]]]]}}" bindtap="__e"></image></view>

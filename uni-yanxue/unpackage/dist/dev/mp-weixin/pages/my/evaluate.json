@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "待评价",
+  "usingComponents": {
+    "myevaluate": "/components/my-evaluate/my-evaluate"
+  }
+}

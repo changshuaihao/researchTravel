@@ -1,0 +1,37 @@
+
+.last{
+  background-color: white;
+  margin: 15rpx 0rpx 15rpx 15rpx;
+  width: 96%;
+  height: 120rpx;
+  -webkit-border-radius: 15rpx;
+          border-radius: 15rpx;
+}
+.last01{
+  font-size: 17px;
+  font-weight: 800;
+  margin-left: 20rpx;
+  padding-top: 20rpx;
+}
+.last02{
+  font-size: 10px;
+  font-weight: 200;
+  padding-left: 20rpx;
+  padding-left: 20rpx;
+}
+.last03{
+  float: right;
+  background-color: yellow;
+  width: 170rpx;
+  height: 40rpx;
+  text-align: center;
+  -webkit-border-radius: 80rpx;
+          border-radius: 80rpx;
+  font-size: 12px;
+  margin-top: 30rpx;
+  margin-right: 30rpx;
+}
+.last04{
+  float: left;
+}
+

@@ -1,0 +1,80 @@
+{
+  "pages": [
+    "pages/my/curriculum",
+    "pages/my/start",
+    "pages/index/index",
+    "pages/jigou/jigou",
+    "pages/records/records",
+    "pages/my/my",
+    "pages/detail/detail",
+    "pages/luxian/luxian",
+    "pages/jidi/jidi",
+    "pages/daoshi/daoshi",
+    "pages/kecheng/kecheng",
+    "pages/aimi/aimi",
+    "pages/pingjia/pingjia",
+    "pages/huaxu/huaxu",
+    "pages/tuijian/tuijian",
+    "pages/shoucang/shoucang",
+    "pages/ceshi/ceshi",
+    "pages/dizhi/dizhi",
+    "pages/kecheng01/kecheng01",
+    "pages/kecheng02/kecheng02",
+    "pages/my/change-name",
+    "pages/my/baseEvaluate",
+    "pages/my/baseCenter",
+    "pages/my/LX3",
+    "pages/my/LX2",
+    "pages/my/LX",
+    "pages/my/information",
+    "pages/my/order",
+    "pages/my/travel-records",
+    "pages/my/set-up",
+    "pages/my/achievement",
+    "pages/my/evaluate",
+    "pages/daoshi/jieshao",
+    "pages/luxian/xian",
+    "pages/study/study"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#FFCE35",
+    "backgroundColor": "#F8F8F8",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#FFCE35",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/static/images/首页 (1).png",
+        "selectedIconPath": "/static/images/首页.png"
+      },
+      {
+        "pagePath": "pages/jigou/jigou",
+        "text": "机构",
+        "iconPath": "/static/icon/jigou.png",
+        "selectedIconPath": "/static/icon/jigou_activ.png"
+      },
+      {
+        "text": "记录",
+        "pagePath": "pages/records/records",
+        "iconPath": "static/images/记录.png",
+        "selectedIconPath": "static/images/记录 (2).png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/static/images/我的 (1).png",
+        "selectedIconPath": "/static/images/我的.png"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}

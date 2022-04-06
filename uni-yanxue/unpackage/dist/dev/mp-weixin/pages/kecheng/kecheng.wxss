@@ -1,0 +1,92 @@
+
+page {
+  background-color: #f4f4f4;
+  font-size: 32rpx;
+}
+.flex{text-align: center;margin-top: 20rpx;}
+.flex-sub{text-align: center;}
+.kecheng,.kecheng01 {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+  margin-top: 20rpx;
+  height:270rpx;
+  width:95%;
+  margin-left: 2.5%;
+}
+.kecheng > image,.kecheng01 > image{
+  padding-left: 20rpx;
+  padding-top: 20rpx;
+  width: 210rpx;
+  height: 210rpx;
+  /* border-radius: 50%;  */
+}
+.button01{
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  margin-left: 2rpx;
+  margin-top:15rpx;
+  background-color:#fff;
+  width: 170rpx;
+  font-size: 11px;
+  height: 65rpx;
+  text-align: center;
+  color: red;
+}
+.button02{
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+            flex: 1;
+  margin-left: 185rpx;
+  background-color:#fff;
+  width: 170rpx;
+  font-size: 11px;
+  height: 65rpx;
+  text-align: center;
+  margin-top: -65rpx;
+  color: red;
+}
+.timu1{
+  font-size: 36rpx;
+  padding-left: 30rpx;
+  padding-top: 20rpx;
+  /* text-align: center; */
+}
+.ai{
+  width:50rpx;
+  height:50rpx;
+ padding-left: 10rpx;
+ /* padding-top:20rpx; */
+}
+.ai01{
+  width:50rpx;
+  height:50rpx;
+ padding-left: 60rpx;
+ /* padding-top:20rpx; */
+}
+.qian{
+  padding-left: 20rpx;
+  padding-top: 40rpx;
+  font-size: 36rpx;
+  color: red;
+}
+.button03{
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+            flex: 1;
+  margin-left: 280rpx;
+  background-color:bisque;
+  width: 150rpx;
+  font-size: 11px;
+  height: 70rpx;
+  text-align: center;
+  margin-top: -55rpx;
+  color: red;
+}
+

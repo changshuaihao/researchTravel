@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>添加课程</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../lib/layui-v2.5.5/css/layui.css" media="all">
+    <link rel="stylesheet" href="../css/public.css" media="all">
+    <style>
+        .layui-form-item .layui-input-company {width: auto;padding-right: 10px;line-height: 38px;}
+    </style>
+</head>
+<body>
+<div class="layuimini-container">
+    <div class="layuimini-main">
+
+        <div class="layui-form layuimini-form">
+			
+			
+            <div class="layui-form-item">
+                <label class="layui-form-label required">课程名称</label>
+                <div class="layui-input-block">
+                    <input type="text" name="sitename" lay-verify="required" lay-reqtext="课程名称不能为空" placeholder="请输入课程名称"  value="从化研学旅行" class="layui-input">
+                    <tip>填写研学课程的名称。</tip>
+                </div>
+            </div>
+			
+			
+            <div class="layui-form-item">
+                <label class="layui-form-label required">任课导师</label>
+                <div class="layui-input-block">
+                    <input type="text" name="domain" lay-verify="required" lay-reqtext="任课导师不能为空" placeholder="请输入任课导师"  value="张教授" class="layui-input">
+                </div>
+            </div>
+
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">课程时间</label>
+                <div class="layui-input-inline" style="width: 80px;">
+                    <input type="text" name="cache" lay-verify="number" value="0" class="layui-input">
+                </div>
+                <div class="layui-input-inline layui-input-company">分钟</div>
+                <div class="layui-form-mid layui-word-aux">任课时间推荐设置为 30分钟</div>
+            </div>
+			
+			
+            <div class="layui-form-item">
+                <label class="layui-form-label">课件上传</label>
+                <div class="layui-input-inline" style="width: 80px;">
+                    <input type="text" name="cache" lay-verify="number" value="2048" class="layui-input">
+                </div>
+                <div class="layui-input-inline layui-input-company">KB</div>
+                <div class="layui-form-mid layui-word-aux">提示：1 M = 1024 KB</div>
+            </div>
+			
+			
+            <div class="layui-form-item">
+                <label class="layui-form-label">课程类别</label>
+                <div class="layui-input-block">
+                    <input type="text" name="cache" value="马列思想" class="layui-input">
+                </div>
+            </div>
+
+
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label required">课程简介</label>
+                <div class="layui-input-block">
+                    <textarea name="title" class="layui-textarea">深刻学习延安精神,加强党性理论学习，切身感受延安红色精神。</textarea>
+                </div>
+            </div>
+			
+			
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">课程大纲</label>
+                <div class="layui-input-block">
+                    <textarea name="keywords" class="layui-textarea" placeholder="第一章 国外社会学学说
+第二章 毛泽东思想
+第三章 中国特色社会主义"></textarea>
+                </div>
+            </div>
+			
+			
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">导师简介</label>
+                <div class="layui-input-block">
+                    <textarea name="descript" class="layui-textarea">张教授 研究生学历，历史学博士，研究员，博士生导师</textarea>
+                </div>
+            </div>
+			
+			
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label required">课程信息</label>
+                <div class="layui-input-block">
+                    <textarea name="copyright" class="layui-textarea">本课程以实用、创新为特色,较为全面的介绍了财经应用文写作的基本内容。本书根据日益发展变化的财经形式的要求</textarea>
+                </div>
+            </div>
+			
+			
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn layui-btn-normal" lay-submit lay-filter="setting">确认添加</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+<script>
+    layui.use(['form'], function () {
+        var form = layui.form
+            , layer = layui.layer;
+
+        //监听提交
+        form.on('submit(setting)', function (data) {
+            parent.layer.alert(JSON.stringify(data.field), {
+                title: '最终的添加信息'
+            });
+            return false;
+        });
+
+    });
+</script>
+</body>
+</html>

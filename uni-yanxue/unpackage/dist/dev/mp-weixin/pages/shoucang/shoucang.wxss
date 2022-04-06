@@ -1,0 +1,15 @@
+
+page {
+  background-color: #f4f4f4;
+  font-size: 32rpx;
+}
+.qian{
+  padding-left: 20rpx;
+  padding-top: 40rpx;
+  font-size: 36rpx;
+  color: red;
+}
+.cu-btn{
+	margin-left: 150rpx;
+}
+

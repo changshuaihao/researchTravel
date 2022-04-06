@@ -1,0 +1,1 @@
+<view class="me"><block wx:for="{{catalog}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view data-event-opts="{{[['tap',[['path_url',['$0'],[[['catalog','',index,'path']]]]]]]}}" bindtap="__e"><image class="ar" src="{{item.catalog_img}}"></image><text class="arrow02">{{item.title}}</text><image class="arrow01" src="{{item.arrow_img}}"></image></view></block></view>

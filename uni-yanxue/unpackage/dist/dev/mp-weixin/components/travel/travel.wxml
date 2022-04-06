@@ -1,0 +1,1 @@
+<view class="last" bindtap="__e" data-event-opts="{{[['tap',[['path',['$event']]]]]}}"><view class="last04"><view class="last01">{{''+title01}}</view><view class="last02">{{title02}}</view></view><input class="last03" type="button" value="立即发布"/></view>

@@ -1,0 +1,128 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 1000,
+  "data": [
+	  
+    {
+      "id": 10000,
+      "username": "计算机导论",
+      "sex": "计算机类",
+      "city": 234,
+      "sign": "已上架",
+      "experience": "张教授",
+      "logins": "从化研学机构",
+      "wealth":90,
+      "classify": "华软基地",
+      "score": "从化机构"
+    },
+    {
+      "id": 10002,
+      "username": "红色文化",
+      "sex": "哲学类",
+      "city": 290,
+      "sign": "已上架",
+      "experience": "李教授",
+      "logins": "从化研学机构",
+      "wealth":90,
+      "classify": "华软基地",
+      "score": "从化机构"
+    },
+    {
+      "id": 10003,
+      "username": "资本论",
+      "sex": "经济学类",
+      "city": 290,
+      "sign": "已上架",
+      "experience": "梁教授",
+      "logins": "从化研学机构",
+      "wealth":90,
+      "classify": "华软基地",
+      "score": "从化机构"
+    },
+    {
+     "id": 10004,
+     "username": "红色文化",
+     "sex": "哲学类",
+     "city": 290,
+     "sign": "已上架",
+     "experience": "李教授",
+     "logins": "从化研学机构",
+     "wealth":90,
+     "classify": "华软基地",
+     "score": "从化机构"
+    },
+    {
+      "id": 10005,
+      "username": "红色文化",
+      "sex": "哲学类",
+      "city": 290,
+      "sign": "已上架",
+      "experience": "李教授",
+      "logins": "从化研学机构",
+      "wealth":90,
+      "classify": "华软基地",
+      "score": "从化机构"
+    },
+    {
+     "id": 10006,
+     "username": "红色文化",
+     "sex": "哲学类",
+     "city": 290,
+     "sign": "已上架",
+     "experience": "李教授",
+     "logins": "从化研学机构",
+     "wealth":90,
+     "classify": "华软基地",
+     "score": "从化机构"
+    },
+    {
+     "id": 10007,
+     "username": "红色文化",
+     "sex": "哲学类",
+     "city": 290,
+     "sign": "已上架",
+     "experience": "李教授",
+     "logins": "从化研学机构",
+     "wealth":90,
+     "classify": "华软基地",
+     "score": "从化机构"
+    },
+    {
+      "id": 10008,
+      "username": "红色文化",
+      "sex": "哲学类",
+      "city": 290,
+      "sign": "已上架",
+      "experience": "李教授",
+      "logins": "从化研学机构",
+      "wealth":90,
+      "classify": "华软基地",
+      "score": "从化机构"
+    },
+    {
+     "id": 10009,
+     "username": "红色文化",
+     "sex": "哲学类",
+     "city": 290,
+     "sign": "已上架",
+     "experience": "李教授",
+     "logins": "从化研学机构",
+     "wealth":90,
+     "classify": "华软基地",
+     "score": "从化机构"
+    },
+    {
+     "id": 10010,
+     "username": "红色文化",
+     "sex": "哲学类",
+     "city": 290,
+     "sign": "已上架",
+     "experience": "李教授",
+     "logins": "从化研学机构",
+     "wealth":90,
+     "classify": "华软基地",
+     "score": "从化机构"
+    }
+  ]
+}

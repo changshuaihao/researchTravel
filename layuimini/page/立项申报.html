@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>课程列表</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../lib/layui-v2.5.5/css/layui.css" media="all">
+    <link rel="stylesheet" href="../css/public.css" media="all">
+    <link rel="stylesheet" href="../js/lay-module/step-lay/step.css" media="all">
+</head>
+<body>
+<div class="layuimini-container">
+    <div class="layuimini-main">
+
+        <div class="layui-fluid">
+            <div class="layui-card">
+                <div class="layui-card-body" style="padding-top: 40px;">
+                    <div class="layui-carousel" id="stepForm" lay-filter="stepForm" style="margin: 0 auto;">
+                        <div carousel-item>
+                            <div>
+                                <form class="layui-form" style="margin: 0 auto;max-width: 460px;padding-top: 40px;">
+									
+<!--                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">游戏ID:</label>
+                                        <div class="layui-input-block">
+                                            <input type="text" placeholder="请填写入款人游戏ID" class="layui-input" lay-verify="number" required />
+
+                                        </div>
+                                    </div> -->
+									
+<!--                                   <div class="layui-form-item">
+                                        <label class="layui-form-label">入款金额:</label>
+                                        <div class="layui-input-block">
+                                            <input type="number" placeholder="请填写入款金额" value="" class="layui-input" lay-verify="number" required>
+                                        </div>
+                                    </div> -->
+									
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">课程分类:</label>
+                                        <div class="layui-input-block">
+                                            <select lay-verify="required">
+                                                <option value="1" selected>哲学类</option>
+                                                <option value="2">经济学</option>
+												<option value="3" >法学类</option>
+												<option value="4">文学类</option>
+                                            </select>
+                                        </div>
+                                    </div>
+<!--                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">入款方式:</label>
+                                        <div class="layui-input-block">
+                                            <select lay-verify="required">
+                                                <option value="1" selected>人工入款</option>
+                                                <option value="2">修正</option>
+                                                <option value="3">活动</option>
+                                                <option value="4">佣金</option>
+                                            </select>
+                                        </div>
+                                    </div> -->
+									
+									<div class="layui-form-item">
+									     <label class="layui-form-label">课题名称:</label>
+									     <div class="layui-input-block">
+									          <input type="text" placeholder="" class="layui-input"  required />
+									     </div>
+									 </div>
+									 
+									 <div class="layui-form-item">
+									     <label class="layui-form-label">课程状态:</label>
+									     <div class="layui-input-block">
+									         <select lay-verify="required">
+									             <option value="1" selected>已上架</option>
+									             <option value="2">待上架</option>
+									         </select>
+									     </div>
+									 </div>
+									 
+									<!-- lay-verify="date" -->
+									 <div class="layui-form-item">
+									      <label class="layui-form-label">课程价格:</label>
+									      <div class="layui-input-block">
+									           <input type="text" name="date" id="date"  placeholder="250元" autocomplete="off" class="layui-input" >
+									      </div>
+									  </div>
+									
+
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">备注说明:</label>
+                                        <div class="layui-input-block">
+                                            <textarea placeholder="" value="" class="layui-textarea"></textarea>
+                                        </div>
+                                    </div>
+									
+									
+                                    <div class="layui-form-item">
+                                        <div class="layui-input-block">
+                                            <button class="layui-btn" lay-submit lay-filter="formStep">
+                                                &emsp;下一步&emsp;
+                                            </button>
+                                        </div>
+                                    </div>	
+                                </form>
+                            </div>
+							
+							<!-- 添加成员 -->
+                            <div>
+                                <form class="layui-form" style="margin: 0 auto;max-width: 460px;padding-top: 40px;">
+  
+									
+                                    <div class="layui-form-item">
+                                        <div class="layui-input-block">
+                                            <button type="button" class="layui-btn layui-btn-primary pre">上一步</button>
+                                            <button class="layui-btn" lay-submit lay-filter="formStep2">
+                                                &emsp;下一步&emsp;
+                                            </button>
+                                        </div>
+                                    </div>
+									
+                                </form>
+                            </div>
+							
+							
+							<div>
+							    <form class="layui-form" style="margin: 0 auto;max-width: 460px;padding-top: 40px;">
+							  
+									
+							        <div class="layui-form-item">
+							            <div class="layui-input-block">
+							                <button type="button" class="layui-btn layui-btn-primary pre">上一步</button>
+							                <button class="layui-btn" lay-submit lay-filter="formStep2">
+							                    &emsp;下一步&emsp;
+							                </button>
+							            </div>
+							        </div>
+									
+							    </form>
+							</div>
+							
+							
+                            <div>
+                                <div style="text-align: center;margin-top: 90px;">
+                                    <i class="layui-icon layui-circle"
+                                       style="color: white;font-size:30px;font-weight:bold;background: #52C41A;padding: 20px;line-height: 80px;">&#xe605;</i>
+                                    <div style="font-size: 24px;color: #333;font-weight: 500;margin-top: 30px;">
+                                        提交成功
+                                    </div>
+                                    <div style="font-size: 14px;color: #666;margin-top: 20px;">预计二十四小时有结果</div>
+                                </div>
+                                <div style="text-align: center;margin-top: 50px;">
+                                    <button class="layui-btn layui-btn-primary">返回首页</button>
+									<button class="layui-btn next">查看课程</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div style="color: #666;margin-top: 30px;margin-bottom: 40px;padding-left: 30px;">
+                        <h3>说明</h3><br>
+						<p>1、上传文件仅支持*.doc、*.dacx、*.pdf、*.txt、*.rtf、*.rar、*.zip文件格式、大小不超过10MB。</p>
+						<p>2、多次上传将酬除前一次上传的文件。上传文件后请等待文件转换,直到鼠标变成可用状态。</p>
+						<p>3、开题时间在课程审核通过后3个月内完成。</p>
+						<p>4、每一步审核通过后才能继续下一个阶段。</p>
+						<p>5、审核未通过或未审核状态的课程可以修改后再提交,审核通过后用户不能再修改提交信息。</p>
+						
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="../lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+<script src="../js/lay-config.js?v=1.0.4" charset="utf-8"></script>
+<script>
+    layui.use([ 'form', 'step'], function () {
+        var $ = layui.$,
+            form = layui.form,
+            step = layui.step;
+
+        step.render({
+            elem: '#stepForm',
+            filter: 'stepForm',
+            width: '100%', //设置容器宽度
+            stepWidth: '750px',
+            height: '500px',
+            stepItems: [
+				
+			{
+                title: '填写课程基本资料'
+            }, 
+			
+			{
+                title: '添加课程成员'
+            }, 
+			
+			{
+			    title: '上传课程文档'
+			}, 
+
+			{
+                title: '等待管理员审核'
+            }]
+        });
+
+
+        form.on('submit(formStep)', function (data) {
+            step.next('#stepForm');
+            return false;
+        });
+
+        form.on('submit(formStep2)', function (data) {
+            step.next('#stepForm');
+            return false;
+        });
+
+        $('.pre').click(function () {
+            step.pre('#stepForm');
+        });
+
+        $('.next').click(function () {
+            step.next('#stepForm');
+        });
+    })
+</script>
+</body>
+</html>

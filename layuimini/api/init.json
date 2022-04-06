@@ -1,0 +1,245 @@
+{
+  "homeInfo": {
+    "title": "首页",
+    "href": "page/welcome-1.html?t=1"
+  },
+  "logoInfo": {
+    "title": "研学旅行平台",
+    "image": "images/logo.png",
+    "href": ""
+  },
+  "menuInfo": [
+    {
+      "title": "研学管理",
+      "icon": "fa fa-address-book",
+      "href": "",
+      "target": "_self",
+      "child": [
+        {
+          "title": "课程管理",
+          "href": "",
+          "icon": "fa fa-home",
+          "target": "_self",
+          "child": [
+            {
+              "title": "课程分类",
+              "href": "page/welcome-1.html",
+              "icon": "fa fa-tachometer",
+              "target": "_self"
+            },
+			{
+			  "title": "课程列表",
+			  "href": "page/kcgl.html",
+			  "icon": "fa fa-tachometer",
+			  "target": "_self"
+			},
+            {
+              "title": "购买课程",
+              "href": "page/gmkc.html",
+              "icon": "fa fa-tachometer",
+              "target": "_self"
+            },
+            {
+              "title": "开展课程",
+              "href": "page/welcome-2.html",
+              "icon": "fa fa-tachometer",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "线路管理",
+          "href": "page/xljs.html",
+          "icon": "fa fa-window-maximize",
+          "target": "_self"
+        },
+        {
+          "title": "研学新闻",
+          "href": "page/yxxw.html",
+          "icon": "fa fa-gears",
+          "target": "_self"
+        },
+        {
+          "title": "评价管理",
+          "href": "page/pjgl.html",
+          "icon": "fa fa-file-text",
+          "target": "_self"
+        },
+        {
+          "title": "活动花絮",
+          "href": "",
+          "icon": "fa fa-calendar",
+          "target": "_self",
+          "child": [
+            {
+              "title": "热门花絮",
+              "href": "page/zxhx.html",
+              "icon": "fa fa-list-alt",
+              "target": "_self"
+            },
+            {
+              "title": "最新花絮",
+              "href": "page/rmhx.html",
+              "icon": "fa fa-navicon",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "基地管理",
+          "href": "",
+          "icon": "fa fa-flag-o",
+          "target": "_self",
+          "child": [
+            {
+              "title": "从化基地",
+              "href": "page/ch.html",
+              "icon": "fa fa-stumbleupon-circle",
+              "target": "_blank"
+            },
+			{
+			  "title": "全部基地",
+			  "href": "page/chjd.html",
+			  "icon": "fa fa-stumbleupon-circle",
+			  "target": "_blank"
+			}
+          ]
+        },
+        {
+          "title": "课程评价",
+          "href": "",
+          "icon": "fa fa-home",
+          "target": "_self",
+          "child": [
+            {
+              "title": "导师评价",
+              "href": "page/dspj.html",
+              "icon": "fa fa-hourglass-end",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "研学评价",
+          "href": "",
+          "icon": "fa fa-snowflake-o",
+          "target": "",
+          "child": [
+            {
+              "title": "机构评价",
+              "href": "page/jgpj.html",
+              "icon": "fa fa-snowflake-o",
+              "target": "_self"
+            },
+            {
+              "title": "基地评价",
+              "href": "page/jdpj.html",
+              "icon": "fa fa-shield",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "用户管理",
+      "icon": "fa fa-lemon-o",
+      "href": "",
+      "target": "_self",
+      "child": [
+        {
+          "title": "用户列表",
+          "href": "page/yhlb1.html",
+          "icon": "fa fa-dot-circle-o",
+          "target": "_self"
+        },
+        {
+          "title": "导师管理",
+          "href": "page/dsgl.html",
+          "icon": "fa fa-adn",
+          "target": "_self"
+        },
+        {
+          "title": "机构列表",
+          "href": "page/jglb.html",
+          "icon": "fa fa-dashboard",
+          "target": "_self"
+        },
+        {
+          "title": "用户关注",
+          "href": "page/yhgz.html",
+          "icon": "fa fa-angle-double-down",
+          "target": "_self"
+        },
+        {
+          "title": "用户动态",
+          "href": "page/yhdt.html",
+          "icon": "fa fa-arrow-up",
+          "target": "_self"
+        },
+        {
+          "title": "管理推荐",
+          "href": "page/tj.html",
+          "icon": "fa fa-edit",
+          "target": "_self"
+        },
+        {
+          "title": "模块管理",
+          "href": "page/area.html",
+          "icon": "fa fa-rocket",
+          "target": "_self"
+        }
+      ]
+    },
+    {
+      "title": "系统设置",
+      "icon": "fa fa-slideshare",
+      "href": "",
+      "target": "_self",
+      "child": [
+        {
+          "title": "系统数据",
+          "href": "",
+          "icon": "fa fa-meetup",
+          "target": "",
+          "child": [
+            {
+              "title": "课程数据",
+              "href": "page/welcome-2.html",
+              "icon": "fa fa-calendar",
+              "target": "_self",
+              "child": [
+                {
+                  "title": "用户数据",
+                  "href": "page/welcome-2.html",
+                  "icon": "fa fa-snowflake-o",
+                  "target": "_self",
+                  "child": [
+                    {
+                      "title": "基地数据",
+                      "href": "page/welcome-2.html",
+                      "icon": "fa fa-snowflake-o",
+                      "target": "_self"
+                    },
+                    {
+                      "title": "机构数据",
+                      "href": "page/welcome-2.html",
+                      "icon": "fa fa-calendar",
+                      "target": "_self"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "帮助与反馈",
+          "href": "page/404.html",
+          "icon": "fa fa-superpowers",
+          "target": "_self"
+        }
+      ]
+    }
+  ]
+}

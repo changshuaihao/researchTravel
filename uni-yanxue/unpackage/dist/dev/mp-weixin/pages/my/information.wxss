@@ -1,0 +1,197 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+page {
+  background-color: #fdf9f9f8;
+}
+.zc {
+  background-color: white;
+  width: 100%;
+  height: 150rpx;
+  line-height: 150rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 17px;
+}
+.zc .zc01 {
+  margin-left: 20%;
+}
+.zc .zc02 {
+  width: 20%;
+  text-align: center;
+}
+.uni-input {
+  border-bottom: 2px solid #ffdc4f;
+  height: 120rpx;
+}
+.content00 {
+  width: 100%;
+  height: 100%;
+  padding-top: 20rpx;
+}
+.content01-view {
+  font-size: 34rpx;
+  width: 40%;
+  font-weight: 549;
+  color: #333333;
+  line-height: 100rpx;
+  padding: 0 30rpx;
+}
+.content01 {
+  background-color: #ffffff;
+  padding: 1rpx 30rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  width: 100%;
+}
+.content01 > input {
+  font-size: 33rpx;
+  width: 60%;
+}
+.content-01 {
+  width: 90%;
+  height: 80rpx;
+  border: 1px solid #535252;
+  margin-left: 5%;
+  -webkit-border-radius: 40px;
+          border-radius: 40px;
+  margin-top: 35rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.content-image {
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 10%;
+  margin-top: 10rpx;
+}
+.content-in {
+  margin-top: 15rpx;
+  margin-left: 20rpx;
+}
+.content-02 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  margin-left: 9%;
+  margin-top: 35rpx;
+  font-size: 16px;
+}
+.content-x {
+  margin-left: 79rpx;
+}
+.content-xj {
+  margin-left: 40rpx;
+}
+.content-button {
+  margin-top: 35rpx;
+  width: 100%;
+  height: 14%;
+}
+.content-button > button {
+  width: 50%;
+  height: 100%;
+  background-color: #ffff00;
+  text-align: center;
+}
+.content-03 {
+  width: 85%;
+  height: 150rpx;
+  background-color: white;
+  border: 1px solid black;
+  margin-left: 5%;
+  padding-left: 30rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.content-03-text {
+  margin-top: 20rpx;
+  font-size: 10px;
+  font-weight: 300;
+}
+.content-03 > input {
+  font-size: 10px;
+  font-weight: 300;
+  margin-top: 8rpx;
+  margin-left: 10rpx;
+  width: 80%;
+}
+.last {
+  margin-top: 20rpx;
+  -webkit-border-radius: 50px;
+          border-radius: 50px;
+  width: 90%;
+  height: 100rpx;
+  font-size: 17px;
+  margin-left: 5%;
+  color: white;
+  font-weight: 700;
+  background-color: #FFCE35;
+}
+.last01 {
+  margin-top: 20rpx;
+  -webkit-border-radius: 50px;
+          border-radius: 50px;
+  width: 90%;
+  height: 100rpx;
+  font-size: 17px;
+  margin-left: 5%;
+  color: white;
+  font-weight: 700;
+  background-color: #c7c6c2;
+}
+.yy {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 30rpx;
+}
+.yy > text {
+  font-size: 16px;
+}
+.yy > image {
+  width: 60rpx;
+  height: 60rpx;
+}
+.lv03 {
+  width: 100%;
+  height: 150rpx;
+  background-color: #ffffff;
+}
+.lv03 > image {
+  width: 30%;
+  height: 150rpx;
+}
+

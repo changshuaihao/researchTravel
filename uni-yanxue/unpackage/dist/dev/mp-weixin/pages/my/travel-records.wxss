@@ -1,0 +1,66 @@
+
+page {
+	background-color: #F2F2F2;
+}
+.lv {
+	width: 90%;
+	height: 300rpx;
+	background-color: white;
+	margin-left: 5%;
+	margin-top: 20rpx;
+	-webkit-box-shadow: 1px 1px 1px 1px rgb(199, 197, 197);
+	        box-shadow: 1px 1px 1px 1px rgb(199, 197, 197);
+}
+.lv>input {
+	font-size: 13px;
+	font-weight: 500;
+	margin-top: 8rpx;
+	margin-left: 10rpx;
+	width: 80%;
+}
+.lv02-view {
+	width: 90%;
+	margin-top: 20rpx;
+	margin-left: 5%;
+}
+.lv02-c {
+	width: 150rpx;
+	height: 150rpx;
+	margin-top: 40rpx;
+	margin-left: 60rpx;
+	text-align: center;
+}
+.lv02-c>image {
+	width: 100rpx;
+	height: 100rpx;
+}
+.lv02-c>view {
+	font-size: 13px;
+	color: rgb(0, 0, 0);
+	margin-top: -10rpx;
+}
+.lv02 {
+	/* display: flex; */
+}
+.last {
+	margin-top: 20rpx;
+	-webkit-border-radius: 50px;
+	        border-radius: 50px;
+	width: 90%;
+	height: 100rpx;
+	font-size: 17px;
+	margin-left: 5%;
+	color: white;
+	font-weight: 700;
+	background-color: #FFCE35;
+}
+.lv03 {
+	width: 100%;
+	height: 150rpx;
+	background-color: #ffffff;
+}
+.lv03>image {
+	width: 30%;
+	height: 150rpx;
+}
+
